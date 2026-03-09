@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HYDRO TECHMA | &Eacute;quipements hydrauliques &agrave; Albert (80)</title>
+<meta name="description" content="HYDRO TECHMA, fournisseur et fabricant de compas hydrauliques, v&eacute;rins, pompes. SAV hydraulique, carrosserie industrielle et gamme agricole &agrave; Albert dans la Somme.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--orange:#F39200;--orange-dark:#D17E00;--dark:#1A1C20;--grey:#3A3D42;--light:#F5F5F3;--cream:#FAFAF8}
+body{font-family:'Source Sans 3',sans-serif;color:var(--grey);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;color:var(--dark)}
+img{max-width:100%;height:auto}
+a{text-decoration:none;color:inherit}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(26,28,32,0.95);backdrop-filter:blur(8px);padding:0.8rem 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav img{height:44px;filter:brightness(1.1)}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{color:rgba(255,255,255,0.85);font-family:'Sora',sans-serif;font-size:0.9rem;transition:color 0.3s}
+.nav-links a:hover{color:var(--orange)}
+.nav-cta{background:var(--orange);color:#fff !important;padding:0.5rem 1.2rem;border-radius:4px;font-weight:600}
+.nav-cta:hover{background:var(--orange-dark)}
+.menu-toggle{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.menu-toggle span{width:24px;height:2px;background:#fff}
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;background:var(--dark)}
+.hero-bg{position:absolute;inset:0;background:url('https://hydro-techma.fr/images/carrosserie-industrielle/carrosserie-industrielle.png') center/cover;opacity:0.25}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,28,32,0.92) 40%,rgba(243,146,0,0.25))}
+.hero-content{position:relative;z-index:2;max-width:700px;padding:2rem 4rem}
+.hero h1{color:#fff;font-size:2.8rem;font-weight:700;line-height:1.15;margin-bottom:1rem}
+.hero h1 span{color:var(--orange)}
+.hero p{color:rgba(255,255,255,0.75);font-size:1.1rem;margin-bottom:2rem;max-width:550px}
+.btn{display:inline-block;padding:0.85rem 2rem;border-radius:4px;font-family:'Sora',sans-serif;font-weight:600;font-size:0.95rem;transition:all 0.3s}
+.btn-orange{background:var(--orange);color:#fff}
+.btn-orange:hover{background:var(--orange-dark);transform:translateY(-2px)}
+.btn-outline{border:2px solid rgba(255,255,255,0.4);color:#fff;margin-left:1rem}
+.btn-outline:hover{background:rgba(255,255,255,0.08)}
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-title{text-align:center;margin-bottom:3rem}
+.section-title h2{font-size:2.2rem;margin-bottom:0.5rem}
+.section-title .accent{color:var(--orange)}
+.section-title p{color:#777;font-size:1.05rem;max-width:550px;margin:0 auto}
+.about{background:var(--cream)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about-img{border-radius:8px;overflow:hidden;box-shadow:0 8px 30px rgba(0,0,0,0.1)}
+.about-img img{width:100%;height:350px;object-fit:cover;display:block}
+.about-text h3{font-size:1.5rem;margin-bottom:1rem}
+.about-text p{margin-bottom:1rem;color:#555}
+.products{background:#fff}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.product-card{background:var(--light);border-radius:8px;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s}
+.product-card:hover{transform:translateY(-6px);box-shadow:0 12px 35px rgba(0,0,0,0.1)}
+.product-card img{width:100%;height:200px;object-fit:cover}
+.product-card-body{padding:1.5rem}
+.product-card h3{font-size:1.05rem;margin-bottom:0.5rem;color:var(--orange)}
+.product-card p{font-size:0.9rem;color:#666;line-height:1.5}
+.services{background:var(--dark);color:#fff}
+.services .section-title h2{color:#fff}
+.services .section-title p{color:rgba(255,255,255,0.6)}
+.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.svc{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:2rem;text-align:center;transition:border-color 0.3s}
+.svc:hover{border-color:var(--orange)}
+.svc-icon{font-size:2.5rem;margin-bottom:1rem}
+.svc h3{color:#fff;font-size:1.05rem;margin-bottom:0.5rem}
+.svc p{color:rgba(255,255,255,0.6);font-size:0.9rem}
+.cta{background:linear-gradient(135deg,var(--orange),var(--orange-dark));text-align:center;color:#fff;padding:4rem 2rem}
+.cta h2{color:#fff;font-size:2rem;margin-bottom:0.8rem}
+.cta p{font-size:1.1rem;opacity:0.9;margin-bottom:2rem;max-width:550px;margin-left:auto;margin-right:auto}
+.btn-white{background:#fff;color:var(--orange-dark)}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px)}
+.contact{background:var(--cream)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.contact-info h3{font-size:1.4rem;margin-bottom:1.5rem}
+.contact-item{display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.5rem}
+.contact-icon{width:44px;height:44px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-icon svg{width:20px;height:20px;fill:#fff}
+.contact-item h4{font-size:0.95rem;margin-bottom:0.2rem}
+.contact-item p{font-size:0.9rem;color:#666}
+.contact-map{border-radius:8px;overflow:hidden;height:100%;min-height:300px}
+.contact-map iframe{width:100%;height:100%;border:0}
+footer{background:var(--dark);color:rgba(255,255,255,0.6);text-align:center;padding:2rem}
+footer p{font-size:0.85rem}
+@media(max-width:768px){
+  .menu-toggle{display:flex}
+  .nav-links{position:fixed;top:0;right:-100%;width:70%;height:100vh;background:var(--dark);flex-direction:column;justify-content:center;padding:2rem;transition:right 0.3s}
+  .nav-links.active{right:0}
+  .hero-content{padding:2rem}
+  .hero h1{font-size:2rem}
+  .about-grid{grid-template-columns:1fr}
+  .products-grid,.services-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .btn-outline{margin-left:0;margin-top:0.8rem}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#"><img src="https://hydro-techma.fr/images/design/logo.png" alt="HYDRO TECHMA"></a>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">L'entreprise</a>
+    <a href="#products">Produits</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="nav-cta">Contact</a>
+  </div>
+  <button class="menu-toggle" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>&Eacute;quipements <span>hydrauliques</span> pour l'industrie et l'agriculture</h1>
+    <p>Fabricant et fournisseur de compas de bennage, v&eacute;rins, pompes et composants hydrauliques. SAV et bureau d'&eacute;tudes &agrave; Albert dans la Somme.</p>
+    <a href="#contact" class="btn btn-orange">Nous contacter</a>
+    <a href="#products" class="btn btn-outline">Nos produits</a>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="https://hydro-techma.fr/images/historique/locaux.png" alt="Locaux HYDRO TECHMA Albert">
+      </div>
+      <div class="about-text">
+        <h3>Sp&eacute;cialiste de l'hydraulique depuis Albert</h3>
+        <p>HYDRO TECHMA est votre partenaire pour tous vos besoins en &eacute;quipements hydrauliques. Implant&eacute;s &agrave; Albert dans la Somme, nous fournissons et fabriquons des compas hydrauliques de bennage pour remorques agricoles et industrielles.</p>
+        <p>Notre bureau d'&eacute;tudes con&ccedil;oit des solutions sur mesure, et notre &eacute;quipe SAV assure l'entretien et la r&eacute;paration de vos pompes hydrauliques, v&eacute;rins et composants.</p>
+        <p>Nous accompagnons les professionnels de l'agriculture, du transport et de l'industrie avec des &eacute;quipements fiables et un service r&eacute;actif.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nos <span class="accent">produits</span></h2>
+      <p>Composants et &eacute;quipements hydrauliques pour tous les secteurs</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://hydro-techma.fr/images/gamme-agricole/gamme-agricole.png" alt="Gamme agricole">
+        <div class="product-card-body">
+          <h3>Gamme agricole</h3>
+          <p>Compas de bennage, compresseurs, groupes de bennage pour remorques agricoles. Solutions adapt&eacute;es &agrave; tous types de remorques.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://hydro-techma.fr/images/carrosserie-industrielle/carrosserie-industrielle.png" alt="Carrosserie industrielle">
+        <div class="product-card-body">
+          <h3>Carrosserie industrielle</h3>
+          <p>Compas de bennage, b&eacute;quilles de stabilisation, distributeurs, commandes pneumatiques et r&eacute;servoirs hydrauliques.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://hydro-techma.fr/images/index/bureau-etudes.png" alt="Bureau d'&eacute;tudes">
+        <div class="product-card-body">
+          <h3>Composants hydrauliques</h3>
+          <p>Pompes &agrave; pistons axiaux et radiaux, v&eacute;rins simple et double effet, v&eacute;rins t&eacute;lescopiques, pompes manuelles et &agrave; engrenages.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-title">
+      <h2>Nos <span class="accent">services</span></h2>
+      <p>Un accompagnement complet pour vos &eacute;quipements hydrauliques</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc">
+        <div class="svc-icon">&#9881;</div>
+        <h3>SAV &amp; R&eacute;paration</h3>
+        <p>Entretien et r&eacute;paration de vos pompes, v&eacute;rins et composants hydrauliques. Intervention rapide.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">&#9999;</div>
+        <h3>Bureau d'&eacute;tudes</h3>
+        <p>Conception de solutions hydrauliques sur mesure adapt&eacute;es &agrave; vos besoins sp&eacute;cifiques.</p>
+      </div>
+      <div class="svc">
+        <div class="svc-icon">&#128230;</div>
+        <h3>Fourniture &amp; Stock</h3>
+        <p>Large gamme de composants en stock pour une livraison rapide. Pi&egrave;ces d&eacute;tach&eacute;es disponibles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Un besoin en hydraulique ?</h2>
+  <p>Contactez-nous pour un devis ou une &eacute;tude personnalis&eacute;e. Notre &eacute;quipe vous r&eacute;pond rapidement.</p>
+  <a href="#contact" class="btn btn-white">Demander un devis</a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-title">
+      <h2>Contactez-<span class="accent">nous</span></h2>
+      <p>Notre &eacute;quipe est &agrave; votre &eacute;coute</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>HYDRO TECHMA</h3>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg></div>
+          <div><h4>Adresse</h4><p>37 Avenue Charles Lomont<br>80300 Albert</p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg></div>
+          <div><h4>T&eacute;l&eacute;phone</h4><p><a href="tel:0322751504">03 22 75 15 04</a></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
+          <div><h4>Email</h4><p><a href="mailto:contact@hydro-techma.com">contact@hydro-techma.com</a></p></div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg></div>
+          <div><h4>Horaires</h4><p>Lundi - Vendredi : 8h00 - 17h00</p></div>
+        </div>
+      </div>
+      <div class="contact-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5000!2d2.6506!3d49.9987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAlbert!5e0!3m2!1sfr!2sfr!4v1" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 HYDRO TECHMA &mdash; &Eacute;quipements hydrauliques &agrave; Albert (80)</p>
+</footer>
+
+<script>
+const toggle=document.getElementById('menuToggle');
+const nav=document.getElementById('navLinks');
+toggle.addEventListener('click',()=>nav.classList.toggle('active'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('active')));
+</script>
+</body>
+</html>
